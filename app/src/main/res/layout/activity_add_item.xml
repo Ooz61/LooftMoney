@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:orientation="vertical"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AddItemActivity">
 
     <EditText
@@ -17,6 +17,7 @@
         android:textSize="24sp"
         android:textColor="#dbdbdb"
         android:lineSpacingExtra="0sp"
+        android:layout_centerInParent="true"
         tools:text="Название"
         android:hint="@string/edittext_name_hint" />
 
@@ -29,6 +30,8 @@
         android:textSize="24sp"
         android:textColor="#dbdbdb"
         android:lineSpacingExtra="0sp"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
         tools:text="Цена"
         android:hint="@string/edittext_price_hint" />
 
@@ -42,9 +45,11 @@
         android:textColor="@color/white"
         android:letterSpacing="0.04"
         android:gravity="center_horizontal"
+        android:layout_below="@id/price"
+        android:layout_centerHorizontal="true"
         tools:text="ДОБАВИТЬ"
         android:background="@null"
         android:text="@string/add_button_title" />
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>
